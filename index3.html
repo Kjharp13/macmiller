@@ -1,0 +1,135 @@
+<html>
+
+<head>
+        <title>Mac Miller</title>
+        
+        <link href="css/reset.css" rel="stylesheet" type="text/css"> 
+        
+        <link href="css/mac.css" rel="stylesheet" type="text/css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    
+    <div class="container">
+        
+        <div class="navbar">
+            <ul>
+                <li><a href="mac%20website.html">HOME</a></li>
+                <li><a href="menu02.html">BIO</a></li>
+                <li><a href="menu03.html">MUSIC</a></li>
+                <li><a href="menu04.html">TOURS</a></li>
+            </ul>
+        </div>
+        
+   
+            
+        <header>TOURS</header>
+            
+
+
+<div class="containertours">
+  <div class="mySlides">
+    <div class="numbertext">Blue Slide Park (2011)</div>
+    <img src="img/BSPtour.jpg" height="750px" width="300px" >
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">Watching Movies With The Sound Off (2013)</div>
+    <img src="img/SMT.jpg" height="1000px" width="300px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">GO:OD AM (2015)</div>
+    <img src="img/GOODAMtour.jpg" height="600px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">The Devine Feminine (2016)</div>
+    <img src="img/TDFtour.jpg" height="850px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">Swimming (2018)</div>
+    <img src="img/SWIMtour.jpg" height="750px">
+  </div>
+    
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img/BSPtour.jpg" style="width:100%" onclick="currentSlide(1)" alt="Blue Slide Park (2011)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/SMT.jpg" style="width:100%" onclick="currentSlide(2)" alt="Watching Movies With The Sound Off (2013)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/GOODAMtour.jpg" style="width:100%" onclick="currentSlide(3)" alt="GO:OD AM (2015)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/TDFtour.jpg" style="width:100%" onclick="currentSlide(4)" alt="The Devine Feminine (2016)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img/SWIMtour.jpg" style="width:100%" onclick="currentSlide(5)" alt="Swimming (2018)">
+    </div>    
+    </div>
+  </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>        
+        
+        
+ <footer>Created 2019. Digital Media Design 2. Ken Harper.</footer>       
+        
+        
+        
+        
+        
+    
+   </div>
+    
+</body>
+
+
+
+
+
+
+
+</html>
